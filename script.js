@@ -1,5 +1,5 @@
 // 🔹 Change this to your GitHub Pages URL + folder path
-const basePath = "https://yourusername.github.io/yourrepo/memories/";
+const basePath = " ";
 
 // 🔹 List of image file names in your folder
 
@@ -43,6 +43,7 @@ const gallery = document.getElementById("gallery");
 imageFiles.forEach(fileName => {
     const img = document.createElement("img");
     img.src = basePath + fileName;
+     img.alt = "Memory photo";
     gallery.appendChild(img);
 });
 
@@ -88,4 +89,5 @@ function updateConfetti() {
 }
 
 setInterval(drawConfetti, 20);
+
 
