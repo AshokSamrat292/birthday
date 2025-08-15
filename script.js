@@ -1,9 +1,9 @@
 // 🔹 Change this to your GitHub Pages URL + folder path
+// 🔹 Change this to match your folder (leave "" if images are in root with index.html)
 const basePath = "";
 
 // 🔹 List of image file names in your folder
-
-     const imageFiles = [
+const imageFiles = [
     "IMG-20220415-WA0008.jpg",
     "IMG-20220204-WA0017.jpg",
     "IMG-20220415-WA0010.jpg",
@@ -42,10 +42,11 @@ const basePath = "";
 const gallery = document.getElementById("gallery");
 imageFiles.forEach(fileName => {
     const img = document.createElement("img");
-    img.src = basePath + fileName;
-     img.alt = "Memory photo";
+    img.src = basePath + fileName; // directly from root
+    img.alt = "Memory photo";
     gallery.appendChild(img);
 });
+
 
 
 // Confetti Effect (same as before)
@@ -89,6 +90,7 @@ function updateConfetti() {
 }
 
 setInterval(drawConfetti, 20);
+
 
 
 
