@@ -3,48 +3,46 @@ const basePath = "https://yourusername.github.io/yourrepo/memories/";
 
 // 🔹 List of image file names in your folder
 
-   const imageFiles = [
-    "memory/IMG-20220415-WA0008.jpg",
-    "memory/IMG-20220204-WA0017.jpg",
-    "memory/IMG-20220415-WA0010.jpg",
-    "memory/IMG-20220415-WA0012.jpg",
-    "memory/IMG-20220727-WA0008.jpg",
-    "memory/IMG-20220727-WA0014.jpg",
-    "memory/IMG-20220727-WA0022.jpg",
-    "memory/IMG-20220801-WA0002.jpg",
-    "memory/IMG-20220802-WA0001.jpg",
-    "memory/IMG-20220802-WA0002.jpg",
-    "memory/IMG-20230204-WA0003.jpg",
-    "memory/IMG-20230204-WA0009.jpg",
-    "memory/IMG-20230408-WA0001.jpg",
-    "memory/IMG-20230408-WA0012.jpg",
-    "memory/IMG-20230615-WA0014.jpg",
-    "memory/IMG-20230615-WA0015.jpg",
-    "memory/IMG-20230615-WA0016.jpg",
-    "memory/IMG-20240801-WA0010.jpg",
-    "memory/IMG-20240815-WA0011.jpg",
-    "memory/IMG-20250315-WA0023.jpg",
-    "memory/IMG-20250315-WA0065.jpg",
-    "memory/IMG-20250315-WA0074.jpg",
-    "memory/IMG-20250315-WA0076.jpg",
-    "memory/IMG-20250315-WA0078.jpg",
-    "memory/IMG-20250315-WA0080.jpg",
-    "memory/IMG-20250721-WA0003.jpg",
-    "memory/IMG-20250803-WA0008.jpg",
-    "memory/IMG-20250806-WA0011.jpg",
-    "memory/IMG_20250703_175555.jpg",
-    "memory/SAVE_20241222_013602.jpg",
-    "memory/Screenshot_2022-07-14-10-19-35-193_com.snapchat.android.jpg",
-    "memory/Snapchat-1436868062.jpg",
+     const imageFiles = [
+    "IMG-20220415-WA0008.jpg",
+    "IMG-20220204-WA0017.jpg",
+    "IMG-20220415-WA0010.jpg",
+    "IMG-20220415-WA0012.jpg",
+    "IMG-20220727-WA0008.jpg",
+    "IMG-20220727-WA0014.jpg",
+    "IMG-20220727-WA0022.jpg",
+    "IMG-20220801-WA0002.jpg",
+    "IMG-20220802-WA0001.jpg",
+    "IMG-20220802-WA0002.jpg",
+    "IMG-20230204-WA0003.jpg",
+    "IMG-20230204-WA0009.jpg",
+    "IMG-20230408-WA0001.jpg",
+    "IMG-20230408-WA0012.jpg",
+    "IMG-20230615-WA0014.jpg",
+    "IMG-20230615-WA0015.jpg",
+    "IMG-20230615-WA0016.jpg",
+    "IMG-20240801-WA0010.jpg",
+    "IMG-20240815-WA0011.jpg",
+    "IMG-20250315-WA0023.jpg",
+    "IMG-20250315-WA0065.jpg",
+    "IMG-20250315-WA0074.jpg",
+    "IMG-20250315-WA0076.jpg",
+    "IMG-20250315-WA0078.jpg",
+    "IMG-20250315-WA0080.jpg",
+    "IMG-20250721-WA0003.jpg",
+    "IMG-20250803-WA0008.jpg",
+    "IMG-20250806-WA0011.jpg",
+    "IMG_20250703_175555.jpg",
+    "SAVE_20241222_013602.jpg",
+    "Screenshot_2022-07-14-10-19-35-193_com.snapchat.android.jpg",
+    "Snapchat-1436868062.jpg",
 ];
 
 // Load images into gallery
 const gallery = document.getElementById("gallery");
-
-imageFiles.forEach(imgPath => {
+imageFiles.forEach(fileName => {
     const img = document.createElement("img");
-    img.src = imgPath;
-    img.alt = "Birthday Memory";
+    img.src = basePath + fileName;
     gallery.appendChild(img);
 });
 
@@ -90,3 +88,4 @@ function updateConfetti() {
 }
 
 setInterval(drawConfetti, 20);
+
