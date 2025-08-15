@@ -1,4 +1,5 @@
 const imageFiles = [
+    "WhatsApp Image 2025-08-15 at 14.05.34_8b8b3460.jpg", 
     "IMG-20220204-WA0017.jpg",
     "IMG-20220415-WA0008.jpg",
     "IMG-20220415-WA0010.jpg",
@@ -31,4 +32,5 @@ const imageFiles = [
     "SAVE_20241222_013602.jpg",
     "Screenshot_2022-07-14-10-19-35-193_com.snapchat.android.jpg",
     "Snapchat-1436868062.jpg",
+
 ];
