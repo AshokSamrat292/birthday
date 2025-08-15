@@ -1,1 +1,54 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    text-align: center;
+    color: #fff;
+}
 
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4081, 0 0 20px #ff79b0; }
+    to { text-shadow: 0 0 20px #ff79b0, 0 0 40px #ff4081; }
+}
+
+.memory-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.memory-gallery img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.memory-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .memory-gallery img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
