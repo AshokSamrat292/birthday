@@ -1,5 +1,5 @@
 // 🔹 Change this to your GitHub Pages URL + folder path
-const basePath = " ";
+const basePath = "";
 
 // 🔹 List of image file names in your folder
 
@@ -89,5 +89,6 @@ function updateConfetti() {
 }
 
 setInterval(drawConfetti, 20);
+
 
 
